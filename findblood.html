@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find Blood - LifeShare Blood Donation</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <style>
+        .find-blood-header {
+            background-color: #0056b3;
+            color: white;
+            padding: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation bar (same as previous pages) -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+        <div class="container">
+            <a class="navbar-brand" href="#">LifeShare</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="donate.html">Donate</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="findblood.html">Find Blood</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Find Blood Header -->
+    <header class="find-blood-header">
+        <div class="container text-center">
+            <h1 class="display-4">Find Blood</h1>
+            <p class="lead">Search for available blood units or request blood for emergency situations.</p>
+        </div>
+    </header>
+
+    <!-- Main content -->
+    <main class="container my-5">
+        <div class="row">
+            <!-- Search Form -->
+            <div class="col-md-6 mb-4">
+                <h2>Search for Blood</h2>
+                <form id="bloodSearchForm">
+                    <div class="mb-3">
+                        <label for="bloodType" class="form-label">Blood Type</label>
+                        <select class="form-select" id="bloodType" required>
+                            <option selected disabled value="">Choose...</option>
+                            <option>A+</option>
+                            <option>A-</option>
+                            <option>B+</option>
+                            <option>B-</option>
+                            <option>AB+</option>
+                            <option>AB-</option>
+                            <option>O+</option>
+                            <option>O-</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label for="location" class="form-label">Location</label>
+                        <input type="text" class="form-control" id="location" placeholder="City or Zip Code" required>
+                    </div>
+                    <div class="mb-3">
+                        <label for="radius" class="form-label">Search Radius (miles)</label>
+                        <input type="number" class="form-control" id="radius" min="1" max="100" value="25">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Search</button>
+                </form>
+            </div>
+
+            <!-- Results Section -->
+            <div class="col-md-6">
+                <h2>Available Blood Units</h2>
+                <div id="searchResults">
+                    <p class="text-muted">Enter your search criteria and click "Search" to find available blood units.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blood Request Process -->
+        <section class="mt-5">
+            <h2>Blood Request Process</h2>
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">How to Request Blood</h5>
+                    <ol>
+                        <li>Search for available blood units using the form above.</li>
+                        <li>If units are available, contact the listed blood bank or hospital directly.</li>
+                        <li>Provide necessary patient information and medical documentation.</li>
+                        <li>Arrange for transportation of the blood units, if required.</li>
+                        <li>Follow up with the blood bank or hospital for any additional requirements.</li>
+                    </ol>
+                    <div class="alert alert-info" role="alert">
+                        <strong>Note:</strong> In emergency situations, please contact your nearest hospital or our emergency hotline directly.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Contact -->
+        <section class="mt-5">
+            <h2>Emergency Contact</h2>
+            <div class="card bg-danger text-white">
+                <div class="card-body">
+                    <h5 class="card-title">24/7 Emergency Hotline</h5>
+                    <p class="card-text">For urgent blood requests or life-threatening situations, please call our emergency hotline:</p>
+                    <h3 class="mb-0"><a href="tel:1800BLOODHELP" class="text-white">1-800-BLOOD-HELP (1-800-256-6343)</a></h3>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer (same as previous pages) -->
+    <footer class="bg-dark text-white py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5>LifeShare Blood Donation</h5>
+                    <p>Connecting donors with those in need since 2023.</p>
+                </div>
+                <div class="col-md-3">
+                    <h5>Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-white">About Us</a></li>
+                        <li><a href="#" class="text-white">Contact</a></li>
+                        <li><a href="#" class="text-white">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3">
+                    <h5>Contact Us</h5>
+                    <address>
+                        123 Blood Drive<br>
+                        Lifesaver City, LS 12345<br>
+                        Phone: (123) 456-7890<br>
+                        Email: info@lifeshare.com
+                    </address>
+                </div>
+            </div>
+            <hr>
+            <div class="text-center">
+                <p>&copy; 2023 LifeShare Blood Donation. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS and Popper.js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom JavaScript for search functionality -->
+    <script>
+        document.getElementById('bloodSearchForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            // In a real application, you would send an AJAX request to your server here
+            // For this example, we'll just show a mock result
+            const bloodType = document.getElementById('bloodType').value;
+            const location = document.getElementById('location').value;
+            const resultsDiv = document.getElementById('searchResults');
+            
+            resultsDiv.innerHTML = `
+                <div class="alert alert-success">
+                    <h4 class="alert-heading">Blood Units Found!</h4>
+                    <p>We found 3 units of ${bloodType} blood near ${location}:</p>
+                    <ul>
+                        <li>City Hospital Blood Bank - 2 units available</li>
+                        <li>Regional Medical Center - 1 unit available</li>
+                    </ul>
+                    <hr>
+                    <p class="mb-0">Please contact the respective blood banks for more information and to request blood.</p>
+                </div>
+            `;
+        });
+    </script>
+</body>
+</html>
